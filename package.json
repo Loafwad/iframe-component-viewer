@@ -6,19 +6,37 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.2",
+    "@tailwindcss/forms": "^0.5.3",
+    "@types/react-icons": "^3.0.0",
+    "autoprefixer": "^10.4.12",
     "next": "12.3.1",
+    "postcss": "^8.4.16",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-icons": "^4.4.0",
+    "react-intersection-observer": "^9.4.0",
+    "tailwindcss": "^3.1.8",
+    "util": "^0.12.4"
+  },
+  "resolutions": {
+    "webpack": "^5",
+    "postcss": "^8.4.16"
   },
   "devDependencies": {
+    "@babel/core": "^7.19.1",
     "@types/node": "18.7.21",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
+    "babel-loader": "^8.2.5",
     "eslint": "8.24.0",
     "eslint-config-next": "12.3.1",
+    "eslint-plugin-storybook": "^0.6.4",
     "typescript": "4.8.3"
   }
 }
