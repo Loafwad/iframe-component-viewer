@@ -283,8 +283,8 @@ const Logo = ({ toggle }: LogoProps) => {
           >
             <Image
               placeholder="blur"
-              blurDataURL="/icons/logo_emblem.svg"
-              src="/icons/logo_emblem.svg"
+              blurDataURL="/images/600x600.jpg"
+              src="/images/600x600.jpg"
               layout="fill"
               objectFit="cover"
               alt=""
@@ -298,8 +298,8 @@ const Logo = ({ toggle }: LogoProps) => {
             >
               <Image
                 placeholder="blur"
-                blurDataURL="/icons/logo_type.svg"
-                src="/icons/logo_type.svg"
+                blurDataURL="/images/600x600.jpg"
+                src="/images/600x600.jpg"
                 layout="fill"
                 objectFit="cover"
                 alt=""

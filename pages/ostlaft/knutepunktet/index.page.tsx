@@ -10,7 +10,7 @@ const data = [
     image: {
       data: {
         attributes: {
-          url: "/images/bilde_av_hyttekatalog.webp",
+          url: "/images/600x600.jpg",
         },
       },
     },
@@ -22,7 +22,7 @@ const data = [
     image: {
       data: {
         attributes: {
-          url: "/images/bilde_av_hyttekatalog.webp",
+          url: "/images/1920x1080.jpg",
         },
       },
     },
@@ -34,7 +34,7 @@ const data = [
     image: {
       data: {
         attributes: {
-          url: "/images/bilde_av_hyttekatalog.webp",
+          url: "/images/720x430.jpg",
         },
       },
     },
