@@ -15,11 +15,11 @@ const data = {
   culpa minim non id magna ex cillum. Ad fugiat nostrud minim veniam in. In sint officia Lorem Lorem magna amet.`,
   images: [
     {
-      url: "/images/bilde_av_hyttekatalog.webp",
+      url: "/images/600x600.jpg",
       alt: "",
     },
     {
-      url: "/images/bilde_av_hyttekatalog.webp",
+      url: "/images/600x600.jpg",
       alt: "",
     },
   ],

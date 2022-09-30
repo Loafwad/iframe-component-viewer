@@ -23,8 +23,8 @@ export const FullSection = ({ title, description, images, button }: KortSagtProp
   return (
     <div className="bg-primary w-full h-full py-12 md:py-24">
       <Layout>
-        <div className="flex-col-reverse lg:flex-row flex w-full  gap-12 lg:gap-24 ">
-          <div className="w-full min-h-[300px]    flex flex-col md:flex-row gap-12 ">
+        <div className="flex-col-reverse lg:flex-row flex w-full  gap-6 md:gap-12 ">
+          <div className="w-full min-h-[300px]    flex flex-col md:flex-row gap-6 md:gap-12 ">
             <div className=" rounded-md overflow-hidden min-h-[30vh] grow w-full relative">
               <Image src={images[0].url} layout="fill" objectFit="cover" alt={images[0].alt} />
             </div>

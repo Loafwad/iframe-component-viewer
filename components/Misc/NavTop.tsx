@@ -42,6 +42,7 @@ const Navmenu = () => {
             <div className="relative ml-4 grid">
               <p className="text-2xl pb-2">Begna</p>
               <LinkElement to="/begna-bruk/full-section" callback={handleClose} />
+              <LinkElement to="/begna-bruk/grid-section" callback={handleClose} />
             </div>
           </div>
           <button className="mb-auto right-0 absolute p-4 text-2xl" onClick={handleClose}>
