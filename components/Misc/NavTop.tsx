@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
-import { HiMenu, HiX } from "react-icons/hi";
+import { HiArrowLeft, HiMenu, HiX } from "react-icons/hi";
 
 const Navmenu = () => {
   const [first, setfirst] = useState(true);
@@ -62,15 +62,33 @@ const LinkElement = ({ to, callback }: { to: string; callback: any }) => {
   const split = to.split("/").pop();
   const title = split;
 
+  const [isActive, setIsActive] = useState(false);
   const router = useRouter();
+
   useEffect(() => {
+    if (router.pathname === to) {
+      setIsActive(true);
+    } else {
+      setIsActive(false);
+    }
     callback();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router]);
 
   return (
     <Link passHref href={to}>
-      <a className="link whitespace-nowrap ml-2 px-2 bg-black mt-2 bg-opacity-5 rounded-md p-0.5">{title}</a>
+      <a
+        className={`${
+          isActive ? "bg-primary bg-opacity-80 text-white" : "bg-black bg-opacity-5"
+        } link whitespace-nowrap flex ml-2 px-2  mt-2  rounded-md p-0.5`}
+      >
+        {title}
+        {isActive && (
+          <span className="my-auto ml-auto">
+            <HiArrowLeft />
+          </span>
+        )}
+      </a>
     </Link>
   );
 };
