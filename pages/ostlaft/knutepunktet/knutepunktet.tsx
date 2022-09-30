@@ -55,7 +55,7 @@ type BlogCardProps = {
 
 const BlogCard = ({ slug, url, title, previewText }: BlogCardProps) => {
   return (
-    <div className={`w-full transiton-all animate-fadeIn flex flex-col gap-6`}>
+    <div className={`w-full  transiton-all animate-fadeIn flex flex-col gap-6`}>
       <Link href={`/blog/${slug}`}>
         <a className="h-[400px] group relative overflow-hidden w-full rounded-md bg-primary">
           <div className="w-full h-full transition-all group-hover:opacity-80 group-hover:scale-105">
@@ -63,12 +63,12 @@ const BlogCard = ({ slug, url, title, previewText }: BlogCardProps) => {
           </div>
         </a>
       </Link>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col h-auto grow  gap-6">
         <div className="flex flex-col gap-4">
           <h5 className="font-plex text-4xl">{title}</h5>
           {previewText && <p>{previewText}</p>}
         </div>
-        <div className="mt-auto w-fit group">
+        <div className="mt-auto  w-fit group">
           <Link href={`/blog/${slug}`} passHref>
             <a className="m-auto group-hover:opacity-40  transition-all group-hover:-translate-y-1 flex gap-2">
               <p>Les mer</p>

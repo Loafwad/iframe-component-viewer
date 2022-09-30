@@ -4,7 +4,7 @@ import Knutepunktet from "./knutepunktet";
 
 const data = [
   {
-    title: "test",
+    title: "Nisi exercitation culpa occaecat veniam consequat ad dolore.",
     previewText:
       "Proident sit consequat tempor nostrud nostrud enim ex nulla ea veniam. Officia magna magna in mollit do excepteur.",
     image: {
@@ -16,7 +16,7 @@ const data = [
     },
   },
   {
-    title: "test",
+    title: "Do est est aliquip incididunt.",
     previewText:
       "Incididunt aliqua incididunt ad do aliquip non. Quis proident incididunt quis labore veniam in nisi commodo ad dolor laboris.",
     image: {
@@ -28,7 +28,7 @@ const data = [
     },
   },
   {
-    title: "test",
+    title: "Mollit in elit incididunt eu ea mollit reprehenderit aliqua est laboris.",
     previewText:
       "Incididunt aliqua incididunt ad do aliquip non. Quis proident incididunt quis labore veniam in nisi commodo ad dolor laboris.",
     image: {
