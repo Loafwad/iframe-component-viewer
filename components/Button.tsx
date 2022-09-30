@@ -21,7 +21,7 @@ const Button = ({ title, meta, secondary, icon, color }: ButtonProps) => {
           className={`${
             color ?? "bg-primary text-white"
           } hover:scale-105 rounded-md w-full px-12 group  flex gap-4    hover:opacity-80  
-           transition-all  p-6 `}
+        transition-all  p-6 `}
         >
           <span className={`font-bold w-full   transition-all `}>{title}</span>
         </button>

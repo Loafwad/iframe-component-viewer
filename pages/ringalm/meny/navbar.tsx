@@ -366,7 +366,6 @@ const Burger = ({ handlerFunction, state, showBackground }: BurgerProps) => {
     handlerFunction(!state);
   }
 
-  console.log("showBackground", showBackground);
   return (
     <button
       onClick={handleToggle}

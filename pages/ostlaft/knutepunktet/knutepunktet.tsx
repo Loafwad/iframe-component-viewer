@@ -13,7 +13,7 @@ const Knutepunktet = ({ data, url }: { data: any; url: string }) => {
         <div className="flex  justify-between">
           <Link href={`${url}`} passHref>
             <a className="link">
-              <h6 className="font-plex text-4xl font-bold">Knutepunktet</h6>
+              <h6 className="font-plex text-4xl md:text-6xl font-bold">Knutepunktet</h6>
             </a>
           </Link>
           <div className="mt-auto hidden lg:flex  group">

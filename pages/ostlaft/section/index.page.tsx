@@ -13,7 +13,7 @@ const Index = () => {
   const [flipped, setFlipped] = useState(false);
   const [merge, setMerge] = useState(false);
   const [rounded, setRounded] = useState(false);
-  const [color, setColor] = useState("bg-white");
+  const [color, setColor] = useState("bg-primary");
 
   function CompProps() {
     const [first, setfirst] = useState(false);
@@ -58,7 +58,7 @@ const Index = () => {
     },
     children: (
       <Section.Body>
-        <h2 id="start" className="font-plex text-4xl lg:text-6xl font-bold">
+        <h2 id="start" className="font-plex text-secondary text-4xl lg:text-6xl font-bold">
           Når den største friheten er å kunne velge
         </h2>
         <p className="text-lg ">
@@ -68,9 +68,17 @@ const Index = () => {
           hvor minner blir skapt. <br />
           Valget er ditt.
         </p>
-        <div className="flex justify-between flex-col lg:flex-row lg:w-4/5 gap-6">
-          <Button title="SE VÅRE MODELLER" meta={{ to: "/modeller", alt: "Naviger til våre hytter" }} />
-          <Button secondary title="SE VÅRE TOMTER" meta={{ to: "/tomter", alt: "Naviger til våre tomter" }} />
+        <div className="flex text-primary justify-between flex-col lg:flex-row lg:w-4/5 gap-6">
+          <Button
+            color="bg-secondary"
+            title="SE VÅRE MODELLER"
+            meta={{ to: "/modeller", alt: "Naviger til våre hytter" }}
+          />
+          <Button
+            color="bg-secondary"
+            title="SE VÅRE TOMTER"
+            meta={{ to: "/tomter", alt: "Naviger til våre tomter" }}
+          />
         </div>
       </Section.Body>
     ),

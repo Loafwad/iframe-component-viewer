@@ -32,6 +32,10 @@ const Navmenu = () => {
               <p className="text-2xl pb-2">Ringalm</p>
               <LinkElement to="/ringalm/meny" />
             </div>
+            <div className="relative ml-4 grid">
+              <p className="text-2xl pb-2">Begna</p>
+              <LinkElement to="/begna-bruk/full-section" />
+            </div>
           </div>
           <button className="mb-auto p-4 text-2xl" onClick={handleClose}>
             <HiX />

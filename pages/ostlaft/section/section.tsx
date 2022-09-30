@@ -30,7 +30,7 @@ const Section = ({ children, image, options, alignMiddle, background }: SectionP
 
   return (
     <div
-      className={`w-full relative    ${
+      className={`w-full relative ${options?.card?.color === "bg-primary" && "text-white"}   ${
         options?.card && `rounded-md py-12 lg:py-24 px-6 lg:px-12 ${options.card.color}`
       }  `}
     >
