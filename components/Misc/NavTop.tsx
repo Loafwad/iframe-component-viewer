@@ -19,17 +19,18 @@ const Navmenu = () => {
         <div className="flex ">
           <div className="flex p-4 w-full flex-col gap-6">
             <div className="relative ml-4 grid">
+              <p className="text-2xl pb-2">Common</p>
+              <LinkElement to="/common/innrb-footer" />
+            </div>
+            <div className="relative ml-4 grid">
               <p className="text-2xl pb-2">Ostlaft</p>
-              <LinkElement title="section" to="/ostlaft/section" />
-              <LinkElement title="meny" to="/ostlaft/meny" />
-              <LinkElement title="3card" to="/ostlaft/3card" />
-              <div className="relative ml-4 grid">
-                <LinkElement title="card" to="/ostlaft/3card/card" />
-              </div>
+              <LinkElement to="/ostlaft/section" />
+              <LinkElement to="/ostlaft/meny" />
+              <LinkElement to="/ostlaft/knutepunktet" />
             </div>
             <div className="relative ml-4 grid">
               <p className="text-2xl pb-2">Ringalm</p>
-              <LinkElement title="meny" to="/ringalm/meny" />
+              <LinkElement to="/ringalm/meny" />
             </div>
           </div>
           <button className="mb-auto p-4 text-2xl" onClick={handleClose}>
@@ -47,10 +48,13 @@ const Navmenu = () => {
   );
 };
 
-const LinkElement = ({ title, to }: { title: string; to: string }) => {
+const LinkElement = ({ to }: { to: string }) => {
+  const split = to.split("/").pop();
+  const title = split;
+
   return (
     <Link passHref href={to}>
-      <a className="link ml-2 px-2 bg-black mt-2 bg-opacity-5 rounded-md p-0.5">{title}</a>
+      <a className="link whitespace-nowrap ml-2 px-2 bg-black mt-2 bg-opacity-5 rounded-md p-0.5">{title}</a>
     </Link>
   );
 };

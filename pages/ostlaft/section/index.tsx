@@ -58,11 +58,9 @@ const Index = () => {
     },
     children: (
       <Section.Body>
-        <Header>
-          <h2 id="start" className="font-plex font-bold">
-            Når den største friheten er å kunne velge
-          </h2>
-        </Header>
+        <h2 id="start" className="font-plex text-4xl lg:text-6xl font-bold">
+          Når den største friheten er å kunne velge
+        </h2>
         <p className="text-lg ">
           Velger du en laftet hytte fra Østlaft AS, velger du valgfrihet. Friheten til å få en hytte tilpasset akkurat
           dine ønsker og behov. Friheten til å la interiøret speile den perfekte blandingen av innovasjon og tradisjon

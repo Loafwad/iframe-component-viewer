@@ -6,5 +6,4 @@ const nextConfig = {
 
 module.exports = module.exports = {
   nextConfig,
-  plugins: [require("@tailwindcss/forms")],
 };
