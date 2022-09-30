@@ -35,7 +35,7 @@ const PropInput = ({
       )}
       <button
         onClick={handleUpdateState}
-        className={`hover:cursor-pointer min-w-[6ch] ${
+        className={`hover:cursor-pointer hover:bg-opacity-20 min-w-[6ch] ${
           state ? "text-sucess" : "text-error"
         } bg-black bg-opacity-10 rounded-md px-2`}
       >

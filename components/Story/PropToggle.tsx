@@ -4,7 +4,11 @@ const PropToggle = ({ state, setState, label }: { state: boolean; setState: any;
   return (
     <button className="gap-12 flex justify-between" onClick={() => setState(!state)}>
       {label}
-      <span className={`min-w-[6ch] ${state ? "text-sucess" : "text-error"} bg-black bg-opacity-10 rounded-md px-2`}>
+      <span
+        className={`min-w-[6ch] hover:bg-opacity-20 ${
+          state ? "text-sucess" : "text-error"
+        } bg-black bg-opacity-10 rounded-md px-2`}
+      >
         {state.toString()}
       </span>
     </button>
