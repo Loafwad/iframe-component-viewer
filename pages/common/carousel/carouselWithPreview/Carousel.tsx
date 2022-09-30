@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Element, scroller } from "react-scroll";
-import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
+import { HiChevronLeft, HiChevronRight, HiX } from "react-icons/hi";
 import { Dialog } from "@headlessui/react";
 import Image from "next/image";
 
@@ -63,7 +63,7 @@ const Carousel = ({ scrollID, dark, options, images }: CarouselProps) => {
 
   return (
     <>
-      <MyDialog image={images[index]} isOpen={isOpen} setIsOpen={handleOpenModal} />
+      <MyDialog handleScrollTo={handleScrollTo} image={images[index]} isOpen={isOpen} setIsOpen={handleOpenModal} />
       <div className="flex h-[100%]  lg:min-h-[600px] flex-col-reverse w-full">
         <div className="flex flex-row gap-4 mx-auto">
           {options?.hasArrows && (
@@ -125,21 +125,42 @@ const Carousel = ({ scrollID, dark, options, images }: CarouselProps) => {
   );
 };
 
-function MyDialog({ isOpen, setIsOpen, image }: { isOpen: boolean; setIsOpen: any; image: string }) {
+type MyDialogProps = {
+  isOpen: boolean;
+  setIsOpen: any;
+  image: string;
+  handleScrollTo: any;
+};
+
+function MyDialog({ isOpen, setIsOpen, image, handleScrollTo }: MyDialogProps) {
   function handleClose() {
     setIsOpen(false);
   }
+  function onClickHandler(value: string) {
+    handleScrollTo(value);
+  }
   return (
-    <Dialog className="w-full" open={isOpen} onClose={handleClose}>
-      <div className="fixed z-20 inset-0 bg-black/30" aria-hidden="true" />
-      <div className="fixed w-fit overflow-hidden  h-fit m-auto rounded-md shadow-md bg-white z-20 inset-0 flex items-center  scale-75 justify-center">
-        <Dialog.Panel>
+    <Dialog className="w-full " open={isOpen} onClose={handleClose}>
+      <div className="fixed z-20 inset-0 bg-black/90" aria-hidden="true" />
+      <div className="fixed w-fit  bg-transparent   h-fit m-auto rounded-md  bg-white z-20 inset-0 flex  items-center text-white    md:scale-75 xl:scale-125 justify-center ">
+        <Dialog.Panel className="flex">
+          <button onClick={() => onClickHandler("back")} className=" text-4xl md:text-6xl">
+            <HiChevronLeft />
+          </button>
+          <button onClick={handleClose} className="bg-primary rounded-md flex -top-4 right-6 md:right-10 z-10 absolute">
+            <div className="text-2xl md:text-4xl m-auto">
+              <HiX />
+            </div>
+          </button>
           <div
-            className=" relative grow  h-full min-w-[300px] min-h-[600px] lg:min-w-[1920px] 
-          md:min-w-[1080px] md:min-h-[600px] lg:h-[1080px] text-white"
+            className="shadow-md rounded-md overflow-hidden relative grow  h-full  min-w-[260px] min-h-[600px] lg:min-w-[1800px] 
+          md:min-w-[960px] md:min-h-[600px] lg:h-[1080px] text-white"
           >
             <Image blurDataURL={image} placeholder="blur" src={image} layout="fill" objectFit="cover" alt={""} />
           </div>
+          <button onClick={() => onClickHandler("forward")} className="text-4xl md:text-6xl">
+            <HiChevronRight />
+          </button>
         </Dialog.Panel>
       </div>
     </Dialog>

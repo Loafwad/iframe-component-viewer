@@ -7,7 +7,7 @@ import PropToggle from "../../../../components/Story/PropToggle";
 import Carousel from "./Carousel";
 
 const Index = () => {
-  const images = ["/images/600x600.jpg", "/images/1920x1080.jpg", "/images/1920x1080.jpg"];
+  const images = ["/images/600x600.jpg", "/images/1920x1080.jpg", "/images/720x430.jpg"];
 
   const [dark, setDark] = useState(true);
   const [hasArrows, setHasArrows] = useState(true);
