@@ -37,7 +37,7 @@ const Index = () => {
           <PropToggle label="Merge" setState={setMerge} state={merge} />
 
           <PropInput
-            list={["bg-primary", "bg-secondary", "bg-accent"]}
+            list={["bg-primary", "bg-secondary", "bg-accent", "bg-transparent"]}
             label="Color"
             setState={setColor}
             state={color}
