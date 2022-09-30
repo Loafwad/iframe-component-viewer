@@ -1,5 +1,6 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import { useRouter } from "next/router";
+import React, { useState, useEffect } from "react";
 import { HiX } from "react-icons/hi";
 
 const Navmenu = () => {
@@ -20,21 +21,21 @@ const Navmenu = () => {
           <div className="flex p-4 w-full flex-col gap-6">
             <div className="relative ml-4 grid">
               <p className="text-2xl pb-2">Common</p>
-              <LinkElement to="/common/innrb-footer" />
+              <LinkElement to="/common/innrb-footer" callback={handleClose} />
             </div>
             <div className="relative ml-4 grid">
               <p className="text-2xl pb-2">Ostlaft</p>
-              <LinkElement to="/ostlaft/section" />
-              <LinkElement to="/ostlaft/meny" />
-              <LinkElement to="/ostlaft/knutepunktet" />
+              <LinkElement to="/ostlaft/section" callback={handleClose} />
+              <LinkElement to="/ostlaft/meny" callback={handleClose} />
+              <LinkElement to="/ostlaft/knutepunktet" callback={handleClose} />
             </div>
             <div className="relative ml-4 grid">
               <p className="text-2xl pb-2">Ringalm</p>
-              <LinkElement to="/ringalm/meny" />
+              <LinkElement to="/ringalm/meny" callback={handleClose} />
             </div>
             <div className="relative ml-4 grid">
               <p className="text-2xl pb-2">Begna</p>
-              <LinkElement to="/begna-bruk/full-section" />
+              <LinkElement to="/begna-bruk/full-section" callback={handleClose} />
             </div>
           </div>
           <button className="mb-auto p-4 text-2xl" onClick={handleClose}>
@@ -52,9 +53,15 @@ const Navmenu = () => {
   );
 };
 
-const LinkElement = ({ to }: { to: string }) => {
+const LinkElement = ({ to, callback }: { to: string; callback: any }) => {
   const split = to.split("/").pop();
   const title = split;
+
+  const router = useRouter();
+  useEffect(() => {
+    callback();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [router]);
 
   return (
     <Link passHref href={to}>
