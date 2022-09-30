@@ -23,7 +23,7 @@ const Index = () => {
           </div>
         </button>
         <div className={` flex overflow-hidden mr-auto flex-col gap-6 ${first ? "h-0 p-0" : "h-full p-6"}`}>
-          <PropInput label="Color" setState={setCompany} state={company} />
+          <PropInput label="Company Name" setState={setCompany} state={company} />
         </div>
       </div>
     );

@@ -7,6 +7,7 @@ import PropInput from "../../../components/Story/PropInput";
 import PropToggle from "../../../components/Story/PropToggle";
 import Section from "./section";
 import { HiX } from "react-icons/hi";
+import InfoLabel from "../../../components/Story/InfoLabel";
 
 const Index = () => {
   const [alignMiddle, setAlignMiddle] = useState(false);
@@ -34,6 +35,7 @@ const Index = () => {
           <PropToggle label="Justify Middle" setState={setAlignMiddle} state={alignMiddle} />
           <PropToggle label="Flipped" setState={setFlipped} state={flipped} />
           <PropToggle label="Merge" setState={setMerge} state={merge} />
+
           <PropInput
             list={["bg-primary", "bg-secondary", "bg-accent"]}
             label="Color"

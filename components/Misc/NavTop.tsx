@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
-import { HiX } from "react-icons/hi";
+import { HiMenu, HiX } from "react-icons/hi";
 
 const Navmenu = () => {
-  const [first, setfirst] = useState(false);
+  const [first, setfirst] = useState(true);
 
   function handleClose() {
     setfirst(!first);
@@ -18,7 +18,7 @@ const Navmenu = () => {
         }  fixed `}
       >
         <div className="flex ">
-          <div className="flex max-h-[80vh]  overflow-scroll p-4 w-full flex-col gap-6">
+          <div className="flex max-h-[80vh]  overflow-scroll pr-4 py-4 w-full flex-col gap-6">
             <div className="relative ml-4 grid">
               <p className="text-2xl pb-2">Common</p>
               <LinkElement to="/common/innrb-footer" callback={handleClose} />
@@ -30,19 +30,20 @@ const Navmenu = () => {
             <div className="relative ml-4 grid">
               <p className="text-2xl pb-2">Ostlaft</p>
               <LinkElement to="/ostlaft/section" callback={handleClose} />
-              <LinkElement to="/ostlaft/meny" callback={handleClose} />
+              <LinkElement to="/ostlaft/navbar" callback={handleClose} />
               <LinkElement to="/ostlaft/knutepunktet" callback={handleClose} />
+              <LinkElement to="/ostlaft/accordion" callback={handleClose} />
             </div>
             <div className="relative ml-4 grid">
               <p className="text-2xl pb-2">Ringalm</p>
-              <LinkElement to="/ringalm/meny" callback={handleClose} />
+              <LinkElement to="/ringalm/navbar" callback={handleClose} />
             </div>
             <div className="relative ml-4 grid">
               <p className="text-2xl pb-2">Begna</p>
               <LinkElement to="/begna-bruk/full-section" callback={handleClose} />
             </div>
           </div>
-          <button className="mb-auto p-4 text-2xl" onClick={handleClose}>
+          <button className="mb-auto right-0 absolute p-4 text-2xl" onClick={handleClose}>
             <HiX />
           </button>
         </div>
@@ -51,7 +52,7 @@ const Navmenu = () => {
         className={`mb-auto  overflow-hidden fixed  text-2xl ${!first ? "w-0 p-0 " : "w-fit p-4"}`}
         onClick={handleClose}
       >
-        <HiX />
+        {!first ? <HiX /> : <HiMenu />}
       </button>
     </div>
   );

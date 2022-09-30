@@ -315,7 +315,6 @@ type NavItemProps = {
 };
 
 const NavItem = ({ links, header, id }: NavItemProps) => {
-  const router = useRouter();
   return (
     <div
       style={{ animationDelay: (id * 125).toString() + "ms" }}
