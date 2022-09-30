@@ -144,7 +144,10 @@ function MyDialog({ isOpen, setIsOpen, image, handleScrollTo }: MyDialogProps) {
       <div className="fixed z-20 inset-0 bg-black/90" aria-hidden="true" />
       <div className="fixed w-fit  bg-transparent   h-fit m-auto rounded-md  bg-white z-20 inset-0 flex  items-center text-white    md:scale-75 justify-center ">
         <Dialog.Panel className="flex">
-          <button onClick={() => onClickHandler("back")} className=" text-4xl md:text-6xl">
+          <button
+            onClick={() => onClickHandler("back")}
+            className="focus:outline-none focus:scale-125 text-4xl md:text-6xl"
+          >
             <HiChevronLeft />
           </button>
           <button onClick={handleClose} className="bg-primary rounded-md flex -top-4 right-6 md:right-10 z-10 absolute">
@@ -158,7 +161,10 @@ function MyDialog({ isOpen, setIsOpen, image, handleScrollTo }: MyDialogProps) {
           >
             <Image blurDataURL={image} placeholder="blur" src={image} layout="fill" objectFit="cover" alt={""} />
           </div>
-          <button onClick={() => onClickHandler("forward")} className="text-4xl md:text-6xl">
+          <button
+            onClick={() => onClickHandler("forward")}
+            className="text-4xl focus:outline-none focus:scale-125   md:text-6xl"
+          >
             <HiChevronRight />
           </button>
         </Dialog.Panel>
