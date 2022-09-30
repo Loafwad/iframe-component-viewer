@@ -37,6 +37,7 @@ const Navmenu = () => {
             <div className="relative ml-4 grid">
               <p className="text-2xl pb-2">Ringalm</p>
               <LinkElement to="/ringalm/navbar" callback={handleClose} />
+              <LinkElement to="/ringalm/lottiescroll" callback={handleClose} />
             </div>
             <div className="relative ml-4 grid">
               <p className="text-2xl pb-2">Begna</p>
