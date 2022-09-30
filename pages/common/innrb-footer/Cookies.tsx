@@ -1,7 +1,7 @@
 import { Fragment, useEffect, useState } from "react";
 import { Dialog, Transition, Switch } from "@headlessui/react";
 import { getCookie, setCookies } from "cookies-next";
-import { HiArrowLeft, HiShieldCheck } from "react-icons/hi";
+import { HiArrowLeft } from "react-icons/hi";
 import Link from "next/link";
 import { useRouter } from "next/router";
 

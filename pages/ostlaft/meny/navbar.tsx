@@ -31,7 +31,7 @@ const data = [
   },
 ];
 
-export const Navbar = () => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isHover, setIsHover] = useState(false);
 
@@ -364,3 +364,5 @@ const NavItem = ({ title, to, id }: NavItemProps) => {
     </div>
   );
 };
+
+export default Navbar;

@@ -73,7 +73,7 @@ const data = [
   },
 ];
 
-export const Navbar = () => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isHover, setIsHover] = useState(false);
 
@@ -409,3 +409,5 @@ const Burger = ({ handlerFunction, state, showBackground }: BurgerProps) => {
     </button>
   );
 };
+
+export default Navbar;
