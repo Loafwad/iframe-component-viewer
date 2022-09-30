@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { HiX } from "react-icons/hi";
 import { Spacer } from "../../../components/Misc/Spacer";
+import InfoLabel from "../../../components/Story/InfoLabel";
 import PropInput from "../../../components/Story/PropInput";
 import PropToggle from "../../../components/Story/PropToggle";
 import { FullSection } from "./FullSection";
@@ -49,6 +50,7 @@ const Index = () => {
         </button>
         <div className={` flex overflow-hidden mr-auto flex-col gap-6 ${first ? "h-0 p-0" : "h-full p-6"}`}>
           <PropInput label="Title" setState={setTitle} state={title} />
+          <InfoLabel text="New line in paragraph is possible with markdown" />
         </div>
       </div>
     );

@@ -5,9 +5,10 @@ import React from "react";
 type InnrbFooterProps = {
   setIsOpen: (state: boolean) => void;
   isOpen: boolean;
+  company: string;
 };
 
-const InnrbFooter = ({ setIsOpen, isOpen }: InnrbFooterProps) => {
+const InnrbFooter = ({ setIsOpen, isOpen, company }: InnrbFooterProps) => {
   function handleToggle(state: boolean) {
     setIsOpen(state);
     console.log("clicked");
@@ -15,7 +16,7 @@ const InnrbFooter = ({ setIsOpen, isOpen }: InnrbFooterProps) => {
   return (
     <div className="h-24 md:h-16 flex justify-between text-sm bg-white md:px-12 flex-col  md:flex-row lg:flex-row lg:justify-between">
       <div className="flex flex-col md:flex-row text-center md:text-left my-auto gap-0 md:gap-6 ">
-        <p>Copyright © 2022 Østlaft AS</p>
+        <p>Copyright © 2022 {company}</p>
         <div className="flex flex-col md:flex-row md:gap-6 mx-auto ">
           <Link href="/personvern" passHref>
             <a className="link">Personvernerklæring</a>

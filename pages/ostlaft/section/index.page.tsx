@@ -34,7 +34,12 @@ const Index = () => {
           <PropToggle label="Justify Middle" setState={setAlignMiddle} state={alignMiddle} />
           <PropToggle label="Flipped" setState={setFlipped} state={flipped} />
           <PropToggle label="Merge" setState={setMerge} state={merge} />
-          <PropInput label="Color" setState={setColor} state={color} />
+          <PropInput
+            list={["bg-primary", "bg-secondary", "bg-accent"]}
+            label="Color"
+            setState={setColor}
+            state={color}
+          />
           <PropToggle label="Image Rounded" setState={setRounded} state={rounded} />
         </div>
       </div>

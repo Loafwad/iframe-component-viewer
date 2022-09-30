@@ -18,7 +18,7 @@ const Navmenu = () => {
         }  fixed `}
       >
         <div className="flex ">
-          <div className="flex p-4 w-full flex-col gap-6">
+          <div className="flex max-h-[80vh]  overflow-scroll p-4 w-full flex-col gap-6">
             <div className="relative ml-4 grid">
               <p className="text-2xl pb-2">Common</p>
               <LinkElement to="/common/innrb-footer" callback={handleClose} />
