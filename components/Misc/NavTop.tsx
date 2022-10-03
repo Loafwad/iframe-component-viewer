@@ -22,7 +22,9 @@ const Navmenu = () => {
             <div className="relative ml-4 grid">
               <p className="text-2xl pb-2">Common</p>
               <LinkElement to="/common/innrb-footer" callback={handleClose} />
+              <LinkElement to="/common/hotLabel" callback={handleClose} />
               <LinkElement to="/common/carousel" callback={handleClose} />
+
               <div className="relative ml-4 grid">
                 <LinkElement to="/common/carousel/carouselWithPreview" callback={handleClose} />
               </div>
