@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { HiX } from "react-icons/hi";
 import { Layout } from "../../../components/Misc/Layout";
 import { Spacer } from "../../../components/Misc/Spacer";
-import InfoLabel from "../../../components/Story/PropInfo";
+import PropInfo from "../../../components/Story/PropInfo";
 import Accordion, { ItemCard } from "./Accordion";
 
 const Index = () => {
@@ -24,8 +24,8 @@ const Index = () => {
           </div>
         </button>
         <div className={` flex overflow-hidden mr-auto flex-col gap-6 ${first ? "h-0 p-0" : "h-full p-6"}`}>
-          <InfoLabel
-            text={`Animation speed is not *easy*   
+          <PropInfo
+            label={`Animation speed is not *easy*   
            to adjust when each component has a dynamic height`}
           />
         </div>

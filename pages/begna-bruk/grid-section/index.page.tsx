@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { HiX } from "react-icons/hi";
 import CompProps from "../../../components/Misc/CompProps";
 import { Spacer } from "../../../components/Misc/Spacer";
-import InfoLabel from "../../../components/Story/PropInfo";
+import PropInfo from "../../../components/Story/PropInfo";
 import { GridSection } from "./GridSection";
 
 const data = {
@@ -76,8 +76,8 @@ const Index = () => {
     <main>
       <Spacer />
       <CompProps>
-        <InfoLabel
-          text={`Component is hard coded to maxium of two rows.
+        <PropInfo
+          label={`Component is hard coded to maxium of two rows.
 
 Will **error** if two rows are not provided.`}
         />

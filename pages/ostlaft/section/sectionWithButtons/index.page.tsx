@@ -4,6 +4,7 @@ import { HiArrowRight } from "react-icons/hi";
 import CompProps from "../../../../components/Misc/CompProps";
 import { Layout } from "../../../../components/Misc/Layout";
 import { Spacer } from "../../../../components/Misc/Spacer";
+import PropInfo from "../../../../components/Story/PropInfo";
 import PropInput from "../../../../components/Story/PropInput";
 import PropToggle from "../../../../components/Story/PropToggle";
 import Section from "../section";
@@ -79,6 +80,7 @@ const Index = () => {
     <main>
       <Spacer />
       <CompProps>
+        <PropInfo label="This component is the same component as section with *different* children." />
         <PropToggle label="Justify Middle" setState={setAlignMiddle} state={alignMiddle} />
         <PropToggle label="Flipped" setState={setFlipped} state={flipped} />
         <PropToggle label="Merge" setState={setMerge} state={merge} />

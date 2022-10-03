@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 
 import CompProps from "../../../components/Misc/CompProps";
 import { Spacer } from "../../../components/Misc/Spacer";
-import InfoLabel from "../../../components/Story/PropInfo";
+import PropInfo from "../../../components/Story/PropInfo";
 import PropInput from "../../../components/Story/PropInput";
 import { FullSection } from "./FullSection";
 
@@ -42,7 +42,7 @@ const Index = () => {
       <Spacer />
       <CompProps>
         <PropInput label="Title" setState={setTitle} state={title} />
-        <InfoLabel text="New line in paragraph is possible with markdown" />
+        <PropInfo label="New line in paragraph is possible with markdown" />
       </CompProps>
       <FullSection {...data} {...props} />
       <Spacer />
