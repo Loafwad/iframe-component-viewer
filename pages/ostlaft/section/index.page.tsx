@@ -10,7 +10,6 @@ import CompProps from "../../../components/Misc/CompProps";
 const Index = () => {
   const [alignMiddle, setAlignMiddle] = useState(false);
   const [flipped, setFlipped] = useState(false);
-  const [merge, setMerge] = useState(false);
   const [rounded, setRounded] = useState(false);
   const [color, setColor] = useState("bg-primary");
 
@@ -18,7 +17,6 @@ const Index = () => {
     alignMiddle: alignMiddle,
     options: {
       flipped: flipped,
-      merge: merge,
       card: {
         color: color,
       },
@@ -64,7 +62,6 @@ const Index = () => {
       <CompProps>
         <PropToggle label="Justify Middle" setState={setAlignMiddle} state={alignMiddle} />
         <PropToggle label="Flipped" setState={setFlipped} state={flipped} />
-        <PropToggle label="Merge" setState={setMerge} state={merge} />
         <PropInput
           list={["bg-primary", "bg-secondary", "bg-accent", "bg-transparent"]}
           label="Color"
