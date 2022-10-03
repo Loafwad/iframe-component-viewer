@@ -33,7 +33,7 @@ export const FullSection = ({ title, description, images, button }: KortSagtProp
             </div>
           </div>
           <article className="h-auto w-full lg:w-1/3 text-white flex flex-col gap-6">
-            <h3 className="font-plex text-4xl md:text-6xl font-bold">{title}</h3>
+            <h3 className="text-4xl md:text-6xl font-bold">{title}</h3>
             <ReactMarkdown>{description}</ReactMarkdown>
             <div className=" w-full md:w-fit lg:w-full text-primary ">
               <Link href={button.link} passHref>

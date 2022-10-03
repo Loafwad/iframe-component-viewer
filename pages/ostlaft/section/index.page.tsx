@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import Button from "../../../components/Button";
-import Header from "../../../components/Header";
 import { Layout } from "../../../components/Misc/Layout";
 import { Spacer } from "../../../components/Misc/Spacer";
 import PropInput from "../../../components/Story/PropInput";
 import PropToggle from "../../../components/Story/PropToggle";
 import Section from "./section";
-import { HiX } from "react-icons/hi";
-import InfoLabel from "../../../components/Story/InfoLabel";
+import CompProps from "../../../components/Misc/CompProps";
 
 const Index = () => {
   const [alignMiddle, setAlignMiddle] = useState(false);
@@ -16,37 +14,6 @@ const Index = () => {
   const [rounded, setRounded] = useState(false);
   const [color, setColor] = useState("bg-primary");
 
-  function CompProps() {
-    const [first, setfirst] = useState(false);
-
-    function handleClose() {
-      setfirst(!first);
-      console.log("click");
-    }
-    return (
-      <div className="bg-white left-0 bottom-0 fixed m-12 rounded-md shadow-md z-20">
-        <button className={`mb-auto p-6 overflow-hidden relative text-black  text-2xl`} onClick={handleClose}>
-          <div className="flex gap-2">
-            <HiX />
-            <p className="text-sm my-auto ">Props</p>
-          </div>
-        </button>
-        <div className={` flex overflow-hidden mr-auto flex-col gap-6 ${first ? "h-0 p-0" : "h-full p-6"}`}>
-          <PropToggle label="Justify Middle" setState={setAlignMiddle} state={alignMiddle} />
-          <PropToggle label="Flipped" setState={setFlipped} state={flipped} />
-          <PropToggle label="Merge" setState={setMerge} state={merge} />
-
-          <PropInput
-            list={["bg-primary", "bg-secondary", "bg-accent", "bg-transparent"]}
-            label="Color"
-            setState={setColor}
-            state={color}
-          />
-          <PropToggle label="Image Rounded" setState={setRounded} state={rounded} />
-        </div>
-      </div>
-    );
-  }
   const props = {
     alignMiddle: alignMiddle,
     options: {
@@ -91,19 +58,24 @@ const Index = () => {
     ),
   };
 
-  function ClonedComp() {
-    return React.createElement(Section, Object.assign(props));
-  }
-
   return (
     <main>
       <Spacer />
-      <CompProps />
-      <div className="flex flex-col  justify-center ">
-        <Layout>
-          <ClonedComp />
-        </Layout>
-      </div>
+      <CompProps>
+        <PropToggle label="Justify Middle" setState={setAlignMiddle} state={alignMiddle} />
+        <PropToggle label="Flipped" setState={setFlipped} state={flipped} />
+        <PropToggle label="Merge" setState={setMerge} state={merge} />
+        <PropInput
+          list={["bg-primary", "bg-secondary", "bg-accent", "bg-transparent"]}
+          label="Color"
+          setState={setColor}
+          state={color}
+        />
+        <PropToggle label="Image Rounded" setState={setRounded} state={rounded} />
+      </CompProps>
+      <Layout>
+        <Section {...props}></Section>
+      </Layout>
       <Spacer />
     </main>
   );

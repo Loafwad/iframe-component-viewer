@@ -49,7 +49,7 @@ const Section = ({ children, image, options, alignMiddle, background }: SectionP
               image.options?.rounded && "rounded-full  aspect-square lg:aspect-square overflow-hidden "
             }`}
           >
-            <ImageAside background={options?.merge} src={image.src} alt={image.alt} />
+            <ImageAside rounded={options?.merge} src={image.src} alt={image.alt} />
           </div>
         )}
         <div className={`w-full flex-col ${options?.merge ? "p-12" : "p-0"}  ${alignMiddle && "my-auto"} flex gap-12`}>
@@ -73,12 +73,12 @@ const Body = ({ children }: ContentProps) => {
   return <div className={`flex flex-col gap-6 text-black  `}>{children}</div>;
 };
 
-const ImageAside = ({ src, alt, background }: { src: string; alt: string; background?: boolean }) => {
+const ImageAside = ({ src, alt, rounded }: { src: string; alt: string; rounded?: boolean }) => {
   return (
     <div className="flex   w-full h-full">
       <div
-        className={`h-full min-h-[420px]  md:h-[100%] lg:min-h-[500px]  ${
-          background ?? "rounded-md"
+        className={`h-full min-h-[420px]  md:h-[100%] lg:min-h-[500px]   ${
+          !rounded && "rounded-md"
         }  xl:h-auto overflow-hidden w-full relative`}
       >
         {src && <Image blurDataURL={src} placeholder="blur" src={src} layout="fill" objectFit="cover" alt={alt} />}

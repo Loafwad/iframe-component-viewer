@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { HiX } from "react-icons/hi";
 import { Layout } from "../../../components/Misc/Layout";
 import { Spacer } from "../../../components/Misc/Spacer";
-import InfoLabel from "../../../components/Story/InfoLabel";
+import InfoLabel from "../../../components/Story/PropInfo";
 import Accordion, { ItemCard } from "./Accordion";
 
 const Index = () => {
