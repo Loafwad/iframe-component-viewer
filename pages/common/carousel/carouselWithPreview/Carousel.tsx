@@ -156,7 +156,7 @@ function MyDialog({ isOpen, setIsOpen, image, handleScrollTo }: MyDialogProps) {
             </div>
           </button>
           <div
-            className="shadow-md rounded-md overflow-hidden relative grow  h-full  min-w-[260px] min-h-[600px] lg:min-w-[1800px] 
+            className="shadow-md rounded-md overflow-hidden relative grow  h-full  min-w-[260px] min-h-[320px] lg:min-w-[1800px] 
           md:min-w-[960px] md:min-h-[600px] lg:h-screen text-white"
           >
             <Image blurDataURL={image} placeholder="blur" src={image} layout="fill" objectFit="cover" alt={""} />

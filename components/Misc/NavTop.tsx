@@ -13,7 +13,7 @@ const Navmenu = () => {
   return (
     <div className="z-40 fixed">
       <div
-        className={` bg-white shadow-md rounded-md m-12 overflow-hidden transition-all ${
+        className={` bg-white shadow-md rounded-md m-2 md:m-12 overflow-hidden transition-all ${
           first ? "w-0 h-0" : "w-[300px]"
         }  fixed `}
       >

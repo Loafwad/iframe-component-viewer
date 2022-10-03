@@ -8,7 +8,7 @@ const CompProps = ({ children }: { children: JSX.Element | JSX.Element[] }) => {
     setfirst(!first);
   }
   return (
-    <div className="bg-white left-0 bottom-0 fixed m-12 rounded-md shadow-md z-20">
+    <div className="bg-white left-0 bottom-0 fixed m-2 md:m-12 rounded-md shadow-md z-20">
       <button className={`mb-auto p-6 overflow-hidden relative text-black  text-2xl`} onClick={handleClose}>
         <div className="flex gap-2">
           <HiX />
