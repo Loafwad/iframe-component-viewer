@@ -142,7 +142,7 @@ function MyDialog({ isOpen, setIsOpen, image, handleScrollTo }: MyDialogProps) {
   return (
     <Dialog className="w-full " open={isOpen} onClose={handleClose}>
       <div className="fixed z-20 inset-0 bg-black/90" aria-hidden="true" />
-      <div className="fixed w-full  bg-transparent   h-full m-auto rounded-md  bg-white z-20 inset-0 flex  items-center text-white   justify-center ">
+      <div className="fixed   bg-transparent w-fit  h-full m-auto rounded-md  bg-white z-20 inset-0 flex  items-center text-white   justify-center ">
         <Dialog.Panel className="flex">
           <button
             onClick={() => onClickHandler("back")}
@@ -150,17 +150,19 @@ function MyDialog({ isOpen, setIsOpen, image, handleScrollTo }: MyDialogProps) {
           >
             <HiChevronLeft />
           </button>
-          <button onClick={handleClose} className="bg-primary rounded-md flex -top-4 right-6 md:right-10 z-10 absolute">
-            <div className="text-2xl md:text-4xl m-auto">
-              <HiX />
-            </div>
-          </button>
-          <div
-            className="shadow-md rounded-md overflow-hidden relative grow 
+          <div className="relative w-full">
+            <button onClick={handleClose} className="bg-primary rounded-md -right-4 -top-4 flex  z-10 absolute">
+              <div className="text-2xl md:text-4xl m-auto">
+                <HiX />
+              </div>
+            </button>
+            <div
+              className="shadow-md rounded-md overflow-hidden relative grow 
           max-h-[35vh] md:max-h-[1000px]
            max-w-[1400px] w-[80vw] h-[80vh] text-white"
-          >
-            <Image blurDataURL={image} placeholder="blur" src={image} layout="fill" objectFit="cover" alt={""} />
+            >
+              <Image blurDataURL={image} placeholder="blur" src={image} layout="fill" objectFit="cover" alt={""} />
+            </div>
           </div>
           <button
             onClick={() => onClickHandler("forward")}
