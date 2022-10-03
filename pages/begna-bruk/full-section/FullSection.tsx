@@ -7,7 +7,7 @@ import { Layout } from "../../../components/Misc/Layout";
 
 type KortSagtProps = {
   title: string;
-  description: string;
+  paragraph: string;
   images: Array<{
     url: string;
     alt: string;
@@ -19,7 +19,7 @@ type KortSagtProps = {
   };
 };
 
-export const FullSection = ({ title, description, images, button }: KortSagtProps) => {
+export const FullSection = ({ title, paragraph, images, button }: KortSagtProps) => {
   return (
     <div className="bg-primary w-full h-full py-12 md:py-24">
       <Layout>
@@ -34,7 +34,7 @@ export const FullSection = ({ title, description, images, button }: KortSagtProp
           </div>
           <article className="h-auto w-full lg:w-1/3 text-white flex flex-col gap-6">
             <h3 className="text-4xl md:text-6xl font-bold">{title}</h3>
-            <ReactMarkdown>{description}</ReactMarkdown>
+            <ReactMarkdown>{paragraph}</ReactMarkdown>
             <div className=" w-full md:w-fit lg:w-full text-primary ">
               <Link href={button.link} passHref>
                 <Button color="bg-secondary" title={button.title} meta={{ to: button.link, alt: "" }} />
