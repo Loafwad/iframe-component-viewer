@@ -30,9 +30,13 @@ const Navmenu = () => {
             <div className="relative ml-4 grid">
               <p className="text-2xl pb-2">Ostlaft</p>
               <LinkElement to="/ostlaft/section" callback={handleClose} />
+              <div className="relative ml-4 grid">
+                <LinkElement to="/ostlaft/section/sectionWithButtons" callback={handleClose} />
+              </div>
               <LinkElement to="/ostlaft/navbar" callback={handleClose} />
               <LinkElement to="/ostlaft/knutepunktet" callback={handleClose} />
               <LinkElement to="/ostlaft/accordion" callback={handleClose} />
+              <LinkElement to="/ostlaft/buttons" callback={handleClose} />
             </div>
             <div className="relative ml-4 grid">
               <p className="text-2xl pb-2">Ringalm</p>

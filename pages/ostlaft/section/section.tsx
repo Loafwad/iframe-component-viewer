@@ -31,7 +31,7 @@ const Section = ({ children, image, options, alignMiddle, background }: SectionP
   return (
     <div
       className={`w-full relative ${options?.card?.color === "bg-primary" && "text-white"}   ${
-        options?.card && `rounded-md ${options.merge ? "" : "py-12 lg:py-24 px-6 lg:px-12"} ${options.card.color}`
+        options?.card && `rounded-md ${options.merge ? "" : "py-12 lg:py-24 px-6 lg:px-24"} ${options.card.color}`
       }  `}
     >
       <div
@@ -52,7 +52,7 @@ const Section = ({ children, image, options, alignMiddle, background }: SectionP
             <ImageAside rounded={options?.merge} src={image.src} alt={image.alt} />
           </div>
         )}
-        <div className={`w-full flex-col ${options?.merge ? "p-12" : "p-0"}  ${alignMiddle && "my-auto"} flex gap-12`}>
+        <div className={`w-full flex-col ${options?.merge ? "p-0" : "p-0"}  ${alignMiddle && "my-auto"} flex gap-12`}>
           {children}
         </div>
       </div>
