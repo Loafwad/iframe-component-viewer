@@ -20,9 +20,10 @@ type SectionProps = {
   };
   background?: boolean;
   alignMiddle?: boolean;
+  indent?: boolean;
 };
 
-const Section = ({ children, image, options, alignMiddle, background }: SectionProps) => {
+const Section = ({ children, image, options, alignMiddle, background, indent }: SectionProps) => {
   const { ref, inView, entry } = useInView({
     threshold: 0.1,
     triggerOnce: true,
@@ -53,7 +54,9 @@ const Section = ({ children, image, options, alignMiddle, background }: SectionP
           </div>
         )}
         <div className={`w-full flex-col ${options?.merge ? "p-0" : "p-0"}  ${alignMiddle && "my-auto"} flex gap-12`}>
-          {children}
+          <div className={`${indent && "flex flex-col space-y-12 p-6 lg:p-24 bg-opacity-20 bg-accent"}`}>
+            {children}
+          </div>
         </div>
       </div>
       {background && (
