@@ -2,10 +2,7 @@ import React, { useEffect, useState } from "react";
 import Button from "../../../components/Button";
 import { Layout } from "../../../components/Misc/Layout";
 import { Spacer } from "../../../components/Misc/Spacer";
-import PropInput from "../../../components/Story/PropInput";
-import PropToggle from "../../../components/Story/PropToggle";
 import Section from "./section";
-import CompProps from "../../../components/Misc/CompProps";
 import { useRouter } from "next/router";
 
 const Props = () => {

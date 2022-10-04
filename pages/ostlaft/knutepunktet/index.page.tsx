@@ -1,6 +1,5 @@
 import React from "react";
-import { Spacer } from "../../../components/Misc/Spacer";
-import Knutepunktet from "./knutepunktet";
+import ResizeFrame from "../../../components/Misc/ResizeFrame";
 
 const data = [
   {
@@ -41,14 +40,14 @@ const data = [
   },
 ];
 
-const index = () => {
+const Index = () => {
+  var decycle = require("json-decycle").decycle;
+  var queryData = JSON.stringify(data, decycle());
   return (
     <main>
-      <Spacer />
-      <Knutepunktet data={data} url="knutepunktet" />
-      <Spacer />
+      <ResizeFrame url="/ostlaft/knutepunktet/props" props={queryData} />
     </main>
   );
 };
 
-export default index;
+export default Index;

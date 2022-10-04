@@ -7,40 +7,39 @@ import { Layout } from "../../../components/Misc/Layout";
 /* url is the url of the blog page */
 
 const Knutepunktet = ({ data, url }: { data: any; url: string }) => {
+  if (!data.length) return <></>;
   return (
-    <Layout>
-      <div className="flex flex-col gap-12">
-        <div className="flex  justify-between">
-          <Link href={`${url}`} passHref>
-            <a className="link">
-              <h6 className="font-plex text-4xl md:text-6xl font-bold">Knutepunktet</h6>
-            </a>
-          </Link>
-          <div className="mt-auto hidden lg:flex  group">
-            <div className="mt-auto w-fit group">
-              <Link href={`${url}`} passHref>
-                <a className="m-auto group-hover:opacity-40  transition-all group-hover:-translate-y-1 flex gap-2">
-                  <p>Les flere saker</p>
-                  <div className="my-auto  transition-all group-hover:pl-2">
-                    <HiArrowRight />
-                  </div>
-                </a>
-              </Link>
-              <div className="h-0.5 group-hover:opacity-40 bg-primary"></div>
-            </div>
+    <div className="flex flex-col gap-12">
+      <div className="flex  justify-between">
+        <Link href={`${url}`} passHref>
+          <a className="link">
+            <h6 className="font-plex text-4xl md:text-6xl font-bold">Knutepunktet</h6>
+          </a>
+        </Link>
+        <div className="mt-auto hidden lg:flex  group">
+          <div className="mt-auto w-fit group">
+            <Link href={`${url}`} passHref>
+              <a className="m-auto group-hover:opacity-40  transition-all group-hover:-translate-y-1 flex gap-2">
+                <p>Les flere saker</p>
+                <div className="my-auto  transition-all group-hover:pl-2">
+                  <HiArrowRight />
+                </div>
+              </a>
+            </Link>
             <div className="h-0.5 group-hover:opacity-40 bg-primary"></div>
           </div>
-        </div>
-        <div className="h-0.5 bg-primary"></div>
-        <div className="grid   grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 lg:gap-6">
-          {data.map((blog: any, i: number) => (
-            <React.Fragment key={i}>
-              <BlogCard {...blog} {...blog.image.data.attributes} />
-            </React.Fragment>
-          ))}
+          <div className="h-0.5 group-hover:opacity-40 bg-primary"></div>
         </div>
       </div>
-    </Layout>
+      <div className="h-0.5 bg-primary"></div>
+      <div className="grid   grid-cols-1 md:grid-cols-2 lg:grid-cols-3  md:gap-6">
+        {data.map((blog: any, i: number) => (
+          <React.Fragment key={i}>
+            <BlogCard {...blog} {...blog.image.data.attributes} />
+          </React.Fragment>
+        ))}
+      </div>
+    </div>
   );
 };
 
