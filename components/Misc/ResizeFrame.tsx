@@ -22,7 +22,7 @@ const ResizeFrame = ({ props, url }: { props: any; url: string }) => {
     document.onmouseup = () => (setFocus(false), (document.onmousemove = document.onmouseup = null));
   }
   return (
-    <div className="flex flex-col  ">
+    <div className="flex flex-col mb-24 ">
       <div className="relative  mx-auto  flex mt-6 gap-2">
         <button
           onClick={() => setSize("480px")}

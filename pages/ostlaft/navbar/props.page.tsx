@@ -4,7 +4,7 @@ import Navbar from "./navbar";
 
 const Props = () => {
   return (
-    <main>
+    <main className="bg-white">
       <Navbar />
       <Spacer />
       <Spacer />
