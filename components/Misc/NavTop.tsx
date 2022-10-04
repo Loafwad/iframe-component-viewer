@@ -5,11 +5,19 @@ import { HiArrowLeft, HiMenu, HiX } from "react-icons/hi";
 
 const Navmenu = () => {
   const [first, setfirst] = useState(true);
+  const [iframe, setIframe] = useState(false);
 
   function handleClose() {
     setfirst(!first);
     console.log("click");
   }
+  useEffect(() => {
+    if (window.top !== window.self) {
+      // node must be inside iframe
+      setIframe(true);
+    }
+  }, []);
+  if (iframe) return <></>;
   return (
     <div className="z-40 fixed">
       <div
@@ -23,8 +31,9 @@ const Navmenu = () => {
               <p className="text-2xl pb-2">Common</p>
               <LinkElement to="/common/innrb-footer" callback={handleClose} />
               <LinkElement to="/common/hotLabel" callback={handleClose} />
-              <LinkElement to="/common/carousel" callback={handleClose} />
+              <LinkElement to="/common/resizable-container" callback={handleClose} />
 
+              <LinkElement to="/common/carousel" callback={handleClose} />
               <div className="relative ml-4 grid">
                 <LinkElement to="/common/carousel/carouselWithPreview" callback={handleClose} />
               </div>

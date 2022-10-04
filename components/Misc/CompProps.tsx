@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { HiX } from "react-icons/hi";
 import Draggable from "react-draggable";
 
@@ -8,6 +8,14 @@ const CompProps = ({ children }: { children: JSX.Element | JSX.Element[] }) => {
   function handleClose() {
     setfirst(!first);
   }
+  //attach component to root
+  useEffect(() => {
+    const root = document.getElementById("root");
+    const div = document.createElement("div");
+    div.id = "compProps";
+
+    root?.appendChild(div);
+  }, []);
   return (
     <div className="bg-white left-0 bottom-0 fixed m-2 md:m-12 rounded-md shadow-md z-20">
       <button className={`mb-auto p-6 overflow-hidden relative text-black  text-2xl`} onClick={handleClose}>
