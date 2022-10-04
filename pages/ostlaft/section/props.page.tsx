@@ -28,10 +28,15 @@ const SectionProps = () => {
     setProps(JSON.parse(queryData2));
   }, [router]);
 
+  useEffect(() => {
+    const el = document.getElementById("this");
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+  }, [router]);
+
   return (
     <div className="bg-white">
       <Spacer />
-      <Layout>
+      <Layout id="this">
         <Section {...props}>
           <Section.Body>
             <div className="flex flex-col gap-6">

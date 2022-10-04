@@ -15,7 +15,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <Layout>
+        <Layout id="this">
           <div className="m-auto text-4xl font-semibold text-primary">
             <h1>
               Velkommen til vårt <span className="text-accent">kartotek!</span>
