@@ -43,7 +43,9 @@ module.exports = {
       error: "#DB4C4C",
       warning: "#E07A3B",
       sucess: "#5D7B51",
-      frame: "#f7fafc",
+
+      frame: "#fafafa",
+      inner: "#f2f2f2",
 
       transparent: "hsl(0,0%,0%,0)",
     },
@@ -133,5 +135,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar")({ nocompatible: true })],
 };

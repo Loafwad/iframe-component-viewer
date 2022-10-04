@@ -18,7 +18,8 @@ main {
   justify-content: center;
   min-height: 100vh;
   overflow-x: hidden;
-  background-color: #fafafa;
+  width: 100vw;
+  background-color: #f2f2f2;
 }
 
 h1,

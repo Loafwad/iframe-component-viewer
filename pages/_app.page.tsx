@@ -5,8 +5,12 @@ import Navmenu from "../components/Misc/NavTop";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <Navmenu />
-      <Component {...pageProps} />
+      <div className="flex bg-frame ">
+        <Navmenu />
+        <main className="mx-auto">
+          <Component {...pageProps} />
+        </main>
+      </div>
     </>
   );
 }

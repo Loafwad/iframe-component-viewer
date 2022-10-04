@@ -19,55 +19,47 @@ const Navmenu = () => {
   }, []);
   if (iframe) return <></>;
   return (
-    <div className="z-40 fixed">
-      <div
-        className={` bg-white shadow-md rounded-md m-2 md:m-12 overflow-hidden transition-all ${
-          first ? "w-0 h-0" : "w-[300px]"
-        }  fixed `}
-      >
-        <div id="navbarTop" className="flex ">
-          <div className="flex max-h-[80vh] overflow-y-auto pr-4 py-4 w-full flex-col gap-6">
-            <div className="relative ml-4 grid">
-              <p className="text-2xl pb-2">Common</p>
-              <LinkElement to="/common/innrb-footer" callback={handleClose} />
-              <LinkElement to="/common/hotLabel" callback={handleClose} />
-              <LinkElement to="/common/resizable-container" callback={handleClose} />
+    <div className={`z-40 transition-all   relative bg-white  shadow-md   ${first ? "w-16 " : "w-[350px] absolute "}`}>
+      <div className="  sticky top-0   w-full   rounded-md  transition-all max-h-screen scrollbar-thin overflow-y-auto    ">
+        <div id="navbarTop" className="flex flex-col ">
+          <div className="flex h-full relative overflow-y-auto pr-4 py-4 w-full flex-col gap-6">
+            <button className=" z-10  absolute right-0 top-0 p-4  text-2xl" onClick={handleClose}>
+              {!first ? <HiX /> : <HiMenu />}
+            </button>
+            <div className={`${first ? "w-0" : "w-full"} overflow-hidden flex flex-col gap-4`}>
+              <div className=" relative ml-4 grid ">
+                <p className={`  overflow-hidden text-2xl pb-2`}>Common</p>
+                <LinkElement to="/common/innrb-footer" callback={handleClose} />
+                <LinkElement to="/common/hotLabel" callback={handleClose} />
+                <LinkElement to="/common/resizable-container" callback={handleClose} />
 
-              <LinkElement to="/common/carousel" callback={handleClose} />
+                <LinkElement to="/common/carousel" callback={handleClose} />
+                <div className="relative ml-4 grid">
+                  <LinkElement to="/common/carousel/carouselWithPreview" callback={handleClose} />
+                </div>
+              </div>
               <div className="relative ml-4 grid">
-                <LinkElement to="/common/carousel/carouselWithPreview" callback={handleClose} />
+                <p className={` overflow-hidden text-2xl pb-2`}>Ostlaft</p>
+                <LinkElement to="/ostlaft/section" callback={handleClose} />
+                <LinkElement to="/ostlaft/navbar" callback={handleClose} />
+                <LinkElement to="/ostlaft/knutepunktet" callback={handleClose} />
+                <LinkElement to="/ostlaft/accordion" callback={handleClose} />
+                <LinkElement to="/ostlaft/buttons" callback={handleClose} />
+              </div>
+              <div className="relative ml-4 grid">
+                <p className={` overflow-hidden text-2xl pb-2`}>Ringalm</p>
+                <LinkElement to="/ringalm/navbar" callback={handleClose} />
+                <LinkElement to="/ringalm/lottiescroll" callback={handleClose} />
+              </div>
+              <div className="relative ml-4 grid">
+                <p className={` overflow-hidden text-2xl pb-2`}>Begna</p>
+                <LinkElement to="/begna-bruk/full-section" callback={handleClose} />
+                <LinkElement to="/begna-bruk/grid-section" callback={handleClose} />
               </div>
             </div>
-            <div className="relative ml-4 grid">
-              <p className="text-2xl pb-2">Ostlaft</p>
-              <LinkElement to="/ostlaft/section" callback={handleClose} />
-              <LinkElement to="/ostlaft/navbar" callback={handleClose} />
-              <LinkElement to="/ostlaft/knutepunktet" callback={handleClose} />
-              <LinkElement to="/ostlaft/accordion" callback={handleClose} />
-              <LinkElement to="/ostlaft/buttons" callback={handleClose} />
-            </div>
-            <div className="relative ml-4 grid">
-              <p className="text-2xl pb-2">Ringalm</p>
-              <LinkElement to="/ringalm/navbar" callback={handleClose} />
-              <LinkElement to="/ringalm/lottiescroll" callback={handleClose} />
-            </div>
-            <div className="relative ml-4 grid">
-              <p className="text-2xl pb-2">Begna</p>
-              <LinkElement to="/begna-bruk/full-section" callback={handleClose} />
-              <LinkElement to="/begna-bruk/grid-section" callback={handleClose} />
-            </div>
           </div>
-          <button className="mb-auto right-0 absolute p-4 text-2xl" onClick={handleClose}>
-            <HiX />
-          </button>
         </div>
       </div>
-      <button
-        className={`mb-auto  overflow-hidden fixed  text-2xl ${!first ? "w-0 p-0 " : "w-fit p-4"}`}
-        onClick={handleClose}
-      >
-        {!first ? <HiX /> : <HiMenu />}
-      </button>
     </div>
   );
 };

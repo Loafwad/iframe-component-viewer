@@ -34,7 +34,7 @@ const Props = () => {
   }, [router]);
 
   return (
-    <main className="bg-white">
+    <main className="bg-frame">
       <Spacer />
       <Layout id="this">
         <Section {...props}>

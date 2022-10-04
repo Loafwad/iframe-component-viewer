@@ -19,12 +19,12 @@ const PropInput = ({
     setState(value);
   }
   return (
-    <div className="gap-2 flex justify-between">
+    <div className="gap-2 flex ">
       <label>{label}</label>
       <input
         list="suggestions"
         onChange={(e) => handleValue(e)}
-        className="gap-2 bg-black bg-opacity-5 rounded-md flex justify-between"
+        className="gap-2 bg-black  w-full bg-opacity-5 rounded-md flex justify-between"
       />
       {list && (
         <datalist id="suggestions">
@@ -35,7 +35,7 @@ const PropInput = ({
       )}
       <button
         onClick={handleUpdateState}
-        className={`hover:cursor-pointer hover:bg-opacity-20 min-w-[6ch] ${
+        className={`hover:cursor-pointer truncate whitespace-nowrap ml-auto  hover:bg-opacity-20 min-w-[6ch] ${
           state ? "text-sucess" : "text-error"
         } bg-black bg-opacity-10 rounded-md px-2`}
       >
