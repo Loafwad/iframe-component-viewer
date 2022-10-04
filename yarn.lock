@@ -2219,6 +2219,11 @@ jsesc@^2.5.1:
   resolved "https://registry.npmjs.org/jsesc/-/jsesc-2.5.2.tgz"
   integrity sha512-OYu7XEzjkCQ3C5Ps3QIZsQfNpqoJyZZA99wd9aWd05NCtC5pWOkShK2mkL6HXQR6/Cy2lbNdPlZBpuQHXE63gA==
 
+json-decycle@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/json-decycle/-/json-decycle-2.0.1.tgz#4c6fe3e6dc7d885e4c2f5d54a731dbbee2af866c"
+  integrity sha512-AONW7uc5/PHtqfOvJOPY1yPPEbJL+ZKeWXclkukRYRoVeNnm4Kyf5+SCezza/TXsqEHCFVp3M/SuSl1fUPmo6w==
+
 json-parse-even-better-errors@^2.3.1:
   version "2.3.1"
   resolved "https://registry.npmjs.org/json-parse-even-better-errors/-/json-parse-even-better-errors-2.3.1.tgz"

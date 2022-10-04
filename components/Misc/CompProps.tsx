@@ -10,12 +10,16 @@ const CompProps = ({ children }: { children: JSX.Element | JSX.Element[] }) => {
   }
   //attach component to root
   useEffect(() => {
-    const root = document.getElementById("root");
+    const root = document.getElementById("navbarTop");
     const div = document.createElement("div");
     div.id = "compProps";
 
+    console.log(root);
+    console.log(div);
+
     root?.appendChild(div);
   }, []);
+
   return (
     <div className="bg-white left-0 bottom-0 fixed m-2 md:m-12 rounded-md shadow-md z-20">
       <button className={`mb-auto p-6 overflow-hidden relative text-black  text-2xl`} onClick={handleClose}>

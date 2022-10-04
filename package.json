@@ -17,6 +17,7 @@
     "@types/react-scroll": "^1.8.4",
     "autoprefixer": "^10.4.12",
     "cookies-next": "^2.1.1",
+    "json-decycle": "^2.0.1",
     "lottie-web": "^5.9.6",
     "next": "12.3.1",
     "postcss": "^8.4.16",
