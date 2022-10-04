@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../../../components/Button";
 import { Layout } from "../../../components/Misc/Layout";
 import { Spacer } from "../../../components/Misc/Spacer";
@@ -10,17 +10,60 @@ import { useRouter } from "next/router";
 
 const SectionProps = () => {
   const router = useRouter();
-  const props = router.asPath;
-  var retrocycle = require("json-decycle").retrocycle;
-  //remove all \ in props to make it valid json
-  console.log(props);
+  const [props, setProps] = useState({});
+
+  useEffect(() => {
+    const queryData = router.asPath.split("?")[1];
+    const queryData2 = queryData
+      .replace(/%22/g, '"')
+      .replace(/%20/g, " ")
+      .replace(/%3A/g, ":")
+      .replace(/%2C/g, ",")
+      .replace(/%7B/g, "{")
+      .replace(/%7D/g, "}")
+      .replace(/%5B/g, "[")
+      .replace(/%5D/g, "]")
+      .replace(/%2F/g, "/");
+
+    setProps(JSON.parse(queryData2));
+  }, [router]);
+
   return (
-    <main>
+    <div className="bg-white">
       <Spacer />
-      <p>{}</p>
+      <Layout>
+        <Section {...props}>
+          <Section.Body>
+            <div className="flex flex-col gap-6">
+              <h2 id="start" className="font-plex text-black text-4xl lg:text-6xl font-bold">
+                Når den største friheten er å kunne velge
+              </h2>
+              <p className="text-lg ">
+                Velger du en laftet hytte fra Østlaft AS, velger du valgfrihet. Friheten til å få en hytte tilpasset
+                akkurat dine ønsker og behov. Friheten til å la interiøret speile den perfekte blandingen av innovasjon
+                og tradisjon som du finner i våre hyttemodeller. Friheten til å bygge et sted der familien vil samles i
+                generasjoner, og hvor minner blir skapt. <br />
+                Valget er ditt.
+              </p>
+              <div className="flex text-white justify-between flex-col lg:flex-row  gap-6">
+                <Button
+                  color="bg-primary"
+                  title="SE VÅRE MODELLER"
+                  meta={{ to: "/modeller", alt: "Naviger til våre hytter" }}
+                />
+                <Button
+                  color="bg-primary"
+                  title="SE VÅRE TOMTER"
+                  meta={{ to: "/tomter", alt: "Naviger til våre tomter" }}
+                />
+              </div>
+            </div>
+          </Section.Body>
+        </Section>
+      </Layout>
 
       <Spacer />
-    </main>
+    </div>
   );
 };
 
