@@ -32,3 +32,4 @@ const CompProps = ({ children }: { children: JSX.Element | JSX.Element[] }) => {
 };
 
 export default CompProps;
+/*  */
