@@ -1,14 +1,10 @@
 import React from "react";
-import { Spacer } from "../../../components/Misc/Spacer";
-import Navbar from "./navbar";
+import ResizeFrame from "../../../components/Misc/ResizeFrame";
 
 const index = () => {
   return (
     <main>
-      <Navbar />
-      <Spacer />
-      <Spacer />
-      <Spacer />
+      <ResizeFrame url="/ostlaft/navbar/props" props={null} />
     </main>
   );
 };

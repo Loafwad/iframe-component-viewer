@@ -43,6 +43,7 @@ module.exports = {
       error: "#DB4C4C",
       warning: "#E07A3B",
       sucess: "#5D7B51",
+      frame: "#f7fafc",
 
       transparent: "hsl(0,0%,0%,0)",
     },

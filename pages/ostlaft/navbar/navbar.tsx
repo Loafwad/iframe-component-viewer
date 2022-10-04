@@ -145,7 +145,7 @@ const MobileNavMenu = ({ isOpen, showBackground, handleToggleOpen }: MobileNavMe
               <Logo />
             </div>
             <div className="relative w-24 h-12 -ml-4">
-              <Image alt="Østlaft" src="/icons/log_type_hvit.svg" layout="fill" objectFit="contain" />
+              <Image alt="Østlaft" src="/images/ostlaft/logo_text_hvit.svg" layout="fill" objectFit="contain" />
             </div>
           </div>
           <div className="flex h-fit gap-6">
@@ -283,8 +283,8 @@ const Logo = ({ toggle }: LogoProps) => {
           >
             <Image
               placeholder="blur"
-              blurDataURL="/images/600x600.jpg"
-              src="/images/600x600.jpg"
+              blurDataURL="/images/ostlaft/logo_emblem.svg"
+              src="/images/ostlaft/logo_emblem.svg"
               layout="fill"
               objectFit="cover"
               alt=""
@@ -298,8 +298,8 @@ const Logo = ({ toggle }: LogoProps) => {
             >
               <Image
                 placeholder="blur"
-                blurDataURL="/images/600x600.jpg"
-                src="/images/600x600.jpg"
+                blurDataURL="/images/ostlaft/logo_text.svg"
+                src="/images/ostlaft/logo_text.svg"
                 layout="fill"
                 objectFit="cover"
                 alt=""

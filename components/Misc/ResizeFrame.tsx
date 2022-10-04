@@ -22,11 +22,11 @@ const ResizeFrame = ({ props, url }: { props: any; url: string }) => {
     document.onmouseup = () => (setFocus(false), (document.onmousemove = document.onmouseup = null));
   }
   return (
-    <div className="flex flex-col">
-      <div className="relative  mx-auto flex mt-6 gap-2">
+    <div className="flex flex-col  ">
+      <div className="relative  mx-auto  flex mt-6 gap-2">
         <button
           onClick={() => setSize("480px")}
-          className={`text-4xl hover:shadow-md ${
+          className={`text-4xl hover:shadow-md  ${
             size === "480px" ? "shadow-md bg-opacity-100 text-white" : "bg-opacity-5 text-black text-opacity-20"
           } p-2 bg-primary  rounded-md  `}
         >
@@ -49,11 +49,11 @@ const ResizeFrame = ({ props, url }: { props: any; url: string }) => {
           <HiOutlineDeviceTablet />
         </button>
       </div>
-      <div className="relative mx-auto ">
-        <div className=" mx-auto mt-4 -mb-3">
+      <div className="relative mx-auto  ">
+        <div className=" mx-auto mt-4 -mb-3 ">
           <div
             style={{ width: size }}
-            className={`not-prose ${
+            className={`not-prose  ${!isFocus && "transition-all"} ${
               isFocus ? "pointer-events-none" : "pointer-events-auto"
             } flex  relative  rounded-xl overflow-hidden  `}
           >

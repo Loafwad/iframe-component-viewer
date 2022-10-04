@@ -2,7 +2,7 @@ import React from "react";
 
 type LayoutProps = {
   children: JSX.Element | JSX.Element[];
-  id: string;
+  id?: string | "this";
 };
 
 export const Layout = ({ children, id }: LayoutProps) => {

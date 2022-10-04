@@ -6,7 +6,7 @@ import ResizeFrame from "../../../components/Misc/ResizeFrame";
 import PropInput from "../../../components/Story/PropInput";
 import PropToggle from "../../../components/Story/PropToggle";
 import Button from "../buttons/Button";
-import SectionProps from "./props.page";
+import Props from "./props.page";
 import Section from "./section";
 
 const Index = () => {

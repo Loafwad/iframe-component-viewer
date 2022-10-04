@@ -8,7 +8,7 @@ import Section from "./section";
 import CompProps from "../../../components/Misc/CompProps";
 import { useRouter } from "next/router";
 
-const SectionProps = () => {
+const Props = () => {
   const router = useRouter();
   const [props, setProps] = useState({});
 
@@ -34,7 +34,7 @@ const SectionProps = () => {
   }, [router]);
 
   return (
-    <div className="bg-white">
+    <main>
       <Spacer />
       <Layout id="this">
         <Section {...props}>
@@ -68,8 +68,8 @@ const SectionProps = () => {
       </Layout>
 
       <Spacer />
-    </div>
+    </main>
   );
 };
 
-export default SectionProps;
+export default Props;
