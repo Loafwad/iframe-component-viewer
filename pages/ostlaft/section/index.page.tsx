@@ -19,9 +19,13 @@ const Index = () => {
 
   const props = {
     alignMiddle: alignMiddle,
-    flipped: flipped,
-    merge: merge,
-    color: color,
+    options: {
+      flipped: flipped,
+      merge: merge,
+      card: {
+        color: color,
+      },
+    },
     indent: indent,
     image: {
       src: "/images/bilde_av_hyttekatalog.webp",
@@ -34,7 +38,6 @@ const Index = () => {
   var decycle = require("json-decycle").decycle;
 
   var queryData = JSON.stringify(props, decycle());
-  console.log("query: ", queryData);
 
   return (
     <main>
@@ -51,7 +54,7 @@ const Index = () => {
         />
         <PropToggle label="Image Rounded" setState={setRounded} state={rounded} />
       </CompProps>
-      <ResizeFrame props={queryData} />
+      <ResizeFrame url="/ostlaft/section/props" props={queryData} />
     </main>
   );
 };

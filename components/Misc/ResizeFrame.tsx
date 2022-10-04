@@ -1,7 +1,14 @@
 import React, { useState } from "react";
-import { HiDesktopComputer, HiDeviceMobile } from "react-icons/hi";
+import {
+  HiDesktopComputer,
+  HiDeviceMobile,
+  HiDeviceTablet,
+  HiOutlineDesktopComputer,
+  HiOutlineDeviceMobile,
+  HiOutlineDeviceTablet,
+} from "react-icons/hi";
 
-const ResizeFrame = ({ props }: any) => {
+const ResizeFrame = ({ props, url }: { props: any; url: string }) => {
   const [size, setSize] = useState("1920px");
   const [isFocus, setFocus] = useState(false);
   function onMouseDownHandler(e: any) {
@@ -9,28 +16,40 @@ const ResizeFrame = ({ props }: any) => {
     setFocus(true);
     document.onmousemove = function onMouseMoveHandler(e) {
       dragX = e.clientX;
-      setSize(dragX);
+
+      setSize(dragX + "px");
     };
     document.onmouseup = () => (setFocus(false), (document.onmousemove = document.onmouseup = null));
   }
-  console.log(isFocus);
   return (
-    <div>
+    <div className="flex flex-col">
       <div className="relative  mx-auto flex mt-6 gap-2">
         <button
           onClick={() => setSize("480px")}
-          className="text-4xl bg-black bg-opacity-5 rounded-md text-black text-opacity-20"
+          className={`text-4xl hover:shadow-md ${
+            size === "480px" ? "shadow-md bg-opacity-100 text-white" : "bg-opacity-5 text-black text-opacity-20"
+          } p-2 bg-primary  rounded-md  `}
         >
-          <HiDeviceMobile />
+          <HiOutlineDeviceMobile />
         </button>
         <button
           onClick={() => setSize("1920px")}
-          className="text-4xl bg-black bg-opacity-5 rounded-md text-black text-opacity-20"
+          className={`text-4xl hover:shadow-md ${
+            size === "1920px" ? "shadow-md bg-opacity-100 text-white" : "bg-opacity-5 text-black text-opacity-20"
+          } p-2 bg-primary  rounded-md  `}
         >
-          <HiDesktopComputer />
+          <HiOutlineDesktopComputer />
+        </button>
+        <button
+          onClick={() => setSize("960px")}
+          className={`text-4xl hover:shadow-md ${
+            size === "960px" ? "shadow-md bg-opacity-100 text-white" : "bg-opacity-5 text-black text-opacity-20"
+          } p-2 bg-primary  rounded-md  `}
+        >
+          <HiOutlineDeviceTablet />
         </button>
       </div>
-      <div className="relative mx-auto scale-75">
+      <div className="relative mx-auto ">
         <div className=" mx-auto mt-4 -mb-3">
           <div
             style={{ width: size }}
@@ -39,7 +58,7 @@ const ResizeFrame = ({ props }: any) => {
             } flex  relative  rounded-xl overflow-hidden  `}
           >
             <iframe
-              src={`/ostlaft/section/props?${props}`}
+              src={`${url}?${props}`}
               className={`relative  grow min-h-[900px] rounded-xl overflow-auto`}
             ></iframe>
             <div className="absolute inset-0 pointer-events-none border border-black/5 rounded-xl dark:border-white/5"></div>

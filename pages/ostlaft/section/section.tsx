@@ -38,7 +38,7 @@ const Section = ({ children, image, options, alignMiddle, background, indent }: 
       <div
         ref={ref}
         className={`w-full  rounded-md z-10  relative md:flex-row  flex flex-col lg:flex-row  ${
-          inView && "animate-fadeInLeft motion-safe:animate-fadeIn  will-change-transform "
+          inView && "animate-fadeInLeft   will-change-transform "
         } justify-start
         flex ${options?.flipped && "flex-col  lg:flex-row-reverse"} ${
           options?.merge ? "gap-0 overflow-hidden" : "gap-12 lg:gap-24"
