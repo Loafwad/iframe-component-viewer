@@ -1,13 +1,8 @@
 import React, { useState } from "react";
-import { HiDesktopComputer, HiDeviceMobile } from "react-icons/hi";
 import CompProps from "../../../components/Misc/CompProps";
-import { Layout } from "../../../components/Misc/Layout";
 import ResizeFrame from "../../../components/Misc/ResizeFrame";
 import PropInput from "../../../components/Story/PropInput";
 import PropToggle from "../../../components/Story/PropToggle";
-import Button from "../buttons/Button";
-import Props from "./props.page";
-import Section from "./section";
 
 const Index = () => {
   const [alignMiddle, setAlignMiddle] = useState(false);
@@ -28,7 +23,7 @@ const Index = () => {
     },
     indent: indent,
     image: {
-      src: "/images/bilde_av_hyttekatalog.webp",
+      src: "/images/600x600.jpg",
       alt: "Bilde av hyttekatalog",
       options: {
         rounded: rounded,
@@ -36,7 +31,6 @@ const Index = () => {
     },
   };
   var decycle = require("json-decycle").decycle;
-
   var queryData = JSON.stringify(props, decycle());
 
   return (
@@ -54,7 +48,7 @@ const Index = () => {
         />
         <PropToggle label="Image Rounded" setState={setRounded} state={rounded} />
       </CompProps>
-      <ResizeFrame url="/ostlaft/section/props" props={queryData} />
+      <ResizeFrame url="/components/section/props" props={queryData} />
     </main>
   );
 };

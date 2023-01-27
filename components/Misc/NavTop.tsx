@@ -29,9 +29,9 @@ const Navmenu = () => {
             <div className={`${first ? "w-0" : "w-full"} overflow-hidden flex flex-col gap-4`}>
               <div className=" relative ml-4 grid ">
                 <p className={`  overflow-hidden text-2xl pb-2`}>Common</p>
-                <LinkElement to="/common/innrb-footer" callback={handleClose} />
+                {/* <LinkElement to="/common/innrb-footer" callback={handleClose} />
                 <LinkElement to="/common/hotLabel" callback={handleClose} />
-                <LinkElement to="/common/resizable-container" callback={handleClose} />
+                <LinkElement to="/common/resizable-container" callback={handleClose} /> */}
 
                 <LinkElement to="/common/carousel" callback={handleClose} />
                 <div className="relative ml-4 grid">
@@ -39,14 +39,14 @@ const Navmenu = () => {
                 </div>
               </div>
               <div className="relative ml-4 grid">
-                <p className={` overflow-hidden text-2xl pb-2`}>Ostlaft</p>
-                <LinkElement to="/ostlaft/section" callback={handleClose} />
-                <LinkElement to="/ostlaft/navbar" callback={handleClose} />
-                <LinkElement to="/ostlaft/knutepunktet" callback={handleClose} />
-                <LinkElement to="/ostlaft/accordion" callback={handleClose} />
-                <LinkElement to="/ostlaft/buttons" callback={handleClose} />
+                <p className={` overflow-hidden text-2xl pb-2`}>Components</p>
+                <LinkElement to="/components/section" callback={handleClose} />
+                <LinkElement to="/components/navbar" callback={handleClose} />
+                <LinkElement to="/components/blog" callback={handleClose} />
+                <LinkElement to="/components/accordion" callback={handleClose} />
+                <LinkElement to="/components/buttons" callback={handleClose} />
               </div>
-              <div className="relative ml-4 grid">
+              {/* <div className="relative ml-4 grid">
                 <p className={` overflow-hidden text-2xl pb-2`}>Ringalm</p>
                 <LinkElement to="/ringalm/navbar" callback={handleClose} />
                 <LinkElement to="/ringalm/lottiescroll" callback={handleClose} />
@@ -55,7 +55,7 @@ const Navmenu = () => {
                 <p className={` overflow-hidden text-2xl pb-2`}>Begna</p>
                 <LinkElement to="/begna-bruk/full-section" callback={handleClose} />
                 <LinkElement to="/begna-bruk/grid-section" callback={handleClose} />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

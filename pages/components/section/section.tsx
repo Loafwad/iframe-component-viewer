@@ -72,10 +72,6 @@ type ContentProps = {
   children: JSX.Element | JSX.Element[];
 };
 
-const Body = ({ children }: ContentProps) => {
-  return <div className={`flex flex-col gap-6 text-black  `}>{children}</div>;
-};
-
 const ImageAside = ({ src, alt, rounded }: { src: string; alt: string; rounded?: boolean }) => {
   return (
     <div className="flex   w-full h-full">

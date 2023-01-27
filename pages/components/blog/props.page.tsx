@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { Layout } from "../../../components/Misc/Layout";
 import { Spacer } from "../../../components/Misc/Spacer";
-import Knutepunktet from "./knutepunktet";
+import Blog from "./blog";
 
 const Props = () => {
   const router = useRouter();
@@ -29,12 +29,11 @@ const Props = () => {
     if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
   }, [router]);
 
-  console.log(props);
   return (
     <main className="bg-frame">
       <Spacer />
       <Layout id="this">
-        <Knutepunktet url="/something" data={props} />
+        <Blog url="/something" data={props} />
       </Layout>
       <Spacer />
     </main>

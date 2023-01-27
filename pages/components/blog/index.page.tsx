@@ -45,7 +45,7 @@ const Index = () => {
   var queryData = JSON.stringify(data, decycle());
   return (
     <main>
-      <ResizeFrame url="/ostlaft/knutepunktet/props" props={queryData} />
+      <ResizeFrame url="/components/blog/props" props={queryData} />
     </main>
   );
 };

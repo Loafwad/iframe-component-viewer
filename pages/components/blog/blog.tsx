@@ -6,7 +6,7 @@ import { Layout } from "../../../components/Misc/Layout";
 
 /* url is the url of the blog page */
 
-const Knutepunktet = ({ data, url }: { data: any; url: string }) => {
+const Blog = ({ data, url }: { data: any; url: string }) => {
   if (!data.length) return <></>;
   return (
     <div className="flex flex-col gap-12">
@@ -83,4 +83,4 @@ const BlogCard = ({ slug, url, title, previewText }: BlogCardProps) => {
   );
 };
 
-export default Knutepunktet;
+export default Blog;

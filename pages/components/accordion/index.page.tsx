@@ -13,7 +13,7 @@ const Index = () => {
       <CompProps>
         <PropInfo label="Animation speed is not *easy* to adjust when each component is dynamic" />
       </CompProps>
-      <ResizeFrame props={null} url="/ostlaft/accordion/props" />
+      <ResizeFrame props={null} url="/components/accordion/props" />
     </main>
   );
 };

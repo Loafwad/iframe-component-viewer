@@ -38,24 +38,25 @@ const Props = () => {
           <Section.Body>
             <div className="flex flex-col gap-6">
               <h2 id="start" className="font-plex text-black text-4xl lg:text-6xl font-bold">
-                Når den største friheten er å kunne velge
+                I like things that are different
               </h2>
               <p className="text-lg ">
-                Velger du en laftet hytte fra Østlaft AS, velger du valgfrihet. Friheten til å få en hytte tilpasset
-                akkurat dine ønsker og behov. Friheten til å la interiøret speile den perfekte blandingen av innovasjon
-                og tradisjon som du finner i våre hyttemodeller. Friheten til å bygge et sted der familien vil samles i
-                generasjoner, og hvor minner blir skapt. <br />
-                Valget er ditt.
+                Minim ad labore in labore minim exercitation ut Lorem labore adipisicing ea Lorem dolore quis. Sint sint
+                cupidatat commodo ad laborum in eu velit irure dolore ad qui incididunt. Velit quis ex dolor nostrud
+                <br />
+                <br />
+                excepteur cillum dolor culpa minim et. Aliquip sit est tempor laborum officia consectetur irure. Fugiat
+                officia sit amet minim tempor dolor enim nulla duis ex laborum dolore enim.
               </p>
               <div className="flex text-white justify-between flex-col lg:flex-row  gap-6">
                 <Button
                   color="bg-primary"
-                  title="SE VÅRE MODELLER"
+                  title="Check out this"
                   meta={{ to: "/modeller", alt: "Naviger til våre hytter" }}
                 />
                 <Button
                   color="bg-primary"
-                  title="SE VÅRE TOMTER"
+                  title="See something you like?"
                   meta={{ to: "/tomter", alt: "Naviger til våre tomter" }}
                 />
               </div>

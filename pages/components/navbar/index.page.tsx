@@ -4,7 +4,7 @@ import ResizeFrame from "../../../components/Misc/ResizeFrame";
 const index = () => {
   return (
     <main>
-      <ResizeFrame url="/ostlaft/navbar/props" props={null} />
+      <ResizeFrame url="/components/navbar/props" props={null} />
     </main>
   );
 };
